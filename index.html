@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYSTEM_ONLINE // 你的名字</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="sciFiBg"></canvas>
+
+    <div class="container">
+        <nav class="cyber-nav">
+            <div class="logo">PROTOCOL: <span class="highlight">HOME</span></div>
+            <ul class="nav-links">
+                <li><a href="#about" data-text="关于">关于</a></li>
+                <li><a href="#projects" data-text="项目">项目</a></li>
+                <li><a href="#contact" data-text="联络">联络</a></li>
+            </ul>
+        </nav>
+
+        <header class="hero-section">
+            <div class="glitch-wrapper">
+                <h1 class="glitch" data-text="USER_NAME">Zhixiang Zhang</h1>
+            </div>
+            <p class="terminal-text">正在初始化系统... <span id="typing-text"></span><span class="cursor">_</span></p>
+            <a href="#projects" class="cyber-btn">
+                <span class="btn-content">执行程序 >></span>
+                <span class="btn-glitch"></span>
+            </a>
+        </header>
+
+        <section id="projects" class="content-section">
+            <h2 class="section-title">PROJECT_LOGS</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-border"></div>
+                    <h3>具身智能 Agent</h3>
+                    <p>基于强化学习的机器人控制系统，集成 LLM 决策核心。</p>
+                    <div class="tags"><span>Python</span> <span>PyTorch</span></div>
+                </div>
+                <div class="card">
+                    <div class="card-border"></div>
+                    <h3>CoinRun 环境</h3>
+                    <p>自定义文本游戏环境，用于测试 AI 的泛化与推理能力。</p>
+                    <div class="tags"><span>RL</span> <span>ProcGen</span></div>
+                </div>
+                <div class="card">
+                    <div class="card-border"></div>
+                    <h3>Generalizable_LLM</h3>
+                    <p>探索大语言模型在复杂任务中的推理泛化边界。</p>
+                    <div class="tags"><span>NLP</span> <span>Research</span></div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="cyber-footer">
+            <p>SYSTEM STATUS: STABLE | © 2026 DESIGNED BY YOU</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

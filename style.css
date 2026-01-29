@@ -1,0 +1,168 @@
+:root {
+    --bg-color: #050505;
+    --neon-cyan: #00f3ff;
+    --neon-pink: #bc13fe;
+    --text-color: #e0e0e0;
+    --card-bg: rgba(10, 20, 30, 0.7);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Share Tech Mono', monospace; /* 代码风格字体 */
+    overflow-x: hidden;
+}
+
+/* 背景画布全屏 */
+#sciFiBg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* 导航栏 */
+.cyber-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0, 243, 255, 0.3);
+}
+
+.logo { font-family: 'Orbitron', sans-serif; font-size: 1.2rem; letter-spacing: 2px; }
+.highlight { color: var(--neon-cyan); text-shadow: 0 0 10px var(--neon-cyan); }
+
+.nav-links { list-style: none; display: flex; gap: 30px; }
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    position: relative;
+    transition: 0.3s;
+}
+.nav-links a:hover { color: var(--neon-cyan); text-shadow: 0 0 8px var(--neon-cyan); }
+
+/* 主视觉 */
+.hero-section {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* 故障文字效果 */
+.glitch {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+    position: relative;
+    color: var(--text-color);
+    text-shadow: 2px 2px var(--neon-pink), -2px -2px var(--neon-cyan);
+    animation: glitch-anim 2s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+    0% { text-shadow: 2px 2px var(--neon-pink), -2px -2px var(--neon-cyan); }
+    25% { text-shadow: -2px 2px var(--neon-cyan), 2px -2px var(--neon-pink); }
+    50% { text-shadow: 2px -2px var(--neon-pink), -2px 2px var(--neon-cyan); }
+    75% { text-shadow: -2px -2px var(--neon-cyan), 2px 2px var(--neon-pink); }
+    100% { text-shadow: 2px 2px var(--neon-pink), -2px -2px var(--neon-cyan); }
+}
+
+.terminal-text {
+    font-size: 1.5rem;
+    margin: 20px 0 40px;
+    color: var(--neon-cyan);
+}
+
+.cursor { animation: blink 1s infinite; }
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+/* 赛博按钮 */
+.cyber-btn {
+    position: relative;
+    padding: 15px 40px;
+    background: transparent;
+    border: 1px solid var(--neon-cyan);
+    color: var(--neon-cyan);
+    font-family: 'Orbitron', sans-serif;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.3s;
+    letter-spacing: 2px;
+}
+.cyber-btn:hover {
+    background: var(--neon-cyan);
+    color: #000;
+    box-shadow: 0 0 20px var(--neon-cyan);
+}
+
+/* 项目卡片网格 */
+.content-section { padding: 50px 0; }
+.section-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--neon-pink);
+    padding-left: 15px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 25px;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+    backdrop-filter: blur(5px);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
+}
+
+.card h3 { color: var(--neon-cyan); margin-bottom: 10px; font-family: 'Orbitron', sans-serif; }
+.tags span {
+    display: inline-block;
+    font-size: 0.8rem;
+    padding: 2px 8px;
+    margin-right: 5px;
+    margin-top: 10px;
+    border: 1px solid var(--neon-pink);
+    color: var(--neon-pink);
+}
+
+.cyber-footer {
+    text-align: center;
+    padding: 50px 0;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .glitch { font-size: 3rem; }
+    .nav-links { display: none; } /* 简化处理：手机端隐藏菜单 */
+}
