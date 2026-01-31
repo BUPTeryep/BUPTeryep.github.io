@@ -246,3 +246,37 @@ html {
 @media (max-width: 768px) {
     .about-grid { grid-template-columns: 1fr; }
 }
+
+/* --- Contact Page Specific Styles --- */
+
+/* 联系方式行 */
+.info-row {
+    margin-bottom: 15px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.1rem;
+}
+
+.info-row .label {
+    color: var(--neon-pink);
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.info-row .link-text {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: 0.3s;
+    border-bottom: 1px solid transparent;
+}
+
+.info-row .link-text:hover {
+    color: var(--neon-cyan);
+    border-bottom: 1px solid var(--neon-cyan);
+    text-shadow: 0 0 5px var(--neon-cyan);
+}
+
+/* 占位符颜色 */
+::placeholder {
+    color: #555;
+}
+
