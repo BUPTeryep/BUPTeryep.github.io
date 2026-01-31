@@ -161,13 +161,6 @@ body {
     font-size: 0.9rem;
 }
 
-/* 响应式调整 */
-@media (max-width: 768px) {
-    .glitch { font-size: 3rem; }
-    .nav-links { display: none; } /* 简化处理：手机端隐藏菜单 */
-
-}
-
 /* --- 新增：平滑滚动 --- */
 html {
     scroll-behavior: smooth;
@@ -242,9 +235,50 @@ html {
     line-height: 1.5;
 }
 
-/* 响应式：手机端变单栏 */
+/* =========================================
+   响应式设计：手机/平板端适配 (Max Width 768px)
+   ========================================= */
 @media (max-width: 768px) {
-    .about-grid { grid-template-columns: 1fr; }
+    
+    /* 1. 导航栏布局调整：改为垂直排列 */
+    .cyber-nav {
+        flex-direction: column; /* 让Logo和菜单上下排列 */
+        gap: 15px;              /* Logo和菜单之间的间距 */
+        padding: 15px 0;
+    }
+
+    /* 2. 显示菜单链接 (之前是 display: none) */
+    .nav-links { 
+        display: flex;          /* 把 display: none 改回来！ */
+        width: 100%;
+        justify-content: center;/* 居中显示 */
+        gap: 20px;              /* 链接之间的间距 */
+        font-size: 0.9rem;      /* 字体稍微改小一点以免换行 */
+        padding: 0;
+    }
+
+    /* 3. 核心布局：内容强制单栏 */
+    .about-grid, 
+    .grid { 
+        grid-template-columns: 1fr !important; 
+    }
+
+    /* 4. 容器和字体调整 */
+    .container {
+        padding: 15px;
+    }
+    .glitch {
+        font-size: 2.5rem; 
+    }
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    /* 5. 调整时间轴位置 */
+    .timeline {
+        margin-left: 5px;
+        padding-left: 15px;
+    }
 }
 
 /* =========================================
@@ -293,4 +327,5 @@ html {
     text-shadow: none;
     padding-left: 0;
 }
+
 
