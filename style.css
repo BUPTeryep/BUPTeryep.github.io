@@ -247,4 +247,50 @@ html {
     .about-grid { grid-template-columns: 1fr; }
 }
 
+/* =========================================
+   CONTACT 页面特定样式
+   ========================================= */
+
+/* 联系信息的每一行 */
+.info-row {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px dashed rgba(0, 243, 255, 0.1); /* 淡淡的分割线 */
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    flex-wrap: wrap; /* 手机端自动换行 */
+}
+
+/* 标签 [EMAIL]: 等 */
+.info-row .label {
+    color: var(--neon-pink);
+    font-weight: bold;
+    margin-right: 15px;
+    min-width: 100px; /* 保持标签宽度对齐 */
+    display: inline-block;
+}
+
+/* 链接文本样式 */
+.info-row .link-text {
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* 鼠标悬停时的发光效果 */
+.info-row .link-text:hover {
+    color: var(--neon-cyan);
+    text-shadow: 0 0 8px var(--neon-cyan);
+    padding-left: 5px; /* 微微右移的动效 */
+}
+
+/* 移除 Scholar 链接暂不可用的点击效果 */
+.info-row .link-text[style*="cursor: not-allowed"]:hover {
+    color: var(--text-color);
+    text-shadow: none;
+    padding-left: 0;
+}
 
