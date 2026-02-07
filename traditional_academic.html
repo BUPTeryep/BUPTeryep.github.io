@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YuanShuo Zhang - Academic Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* --- 全局样式 --- */
+        :root {
+            --primary-color: #333;
+            --link-color: #0066cc;
+            --text-color: #444;
+            --bg-color: #fff;
+            --sidebar-width: 280px;
+        }
+
+        body {
+            font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #fafafa;
+        }
+
+        a { text-decoration: none; color: var(--link-color); }
+        a:hover { text-decoration: underline; }
+
+        /* --- 布局容器 --- */
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+        }
+
+        /* --- 侧边栏样式 (左侧) --- */
+        .sidebar {
+            width: var(--sidebar-width);
+            padding: 40px 20px;
+            background-color: #fff;
+            border-right: 1px solid #eee;
+            text-align: left;
+            flex-shrink: 0;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid #eee;
+        }
+
+        .name { font-size: 24px; font-weight: bold; color: #000; margin-bottom: 5px; }
+        .cn-name { font-size: 20px; margin-bottom: 15px; display: block; }
+        
+        .sidebar-info { font-size: 14px; margin-bottom: 20px; }
+        .sidebar-info p { margin: 5px 0; }
+        
+        .contact-list { list-style: none; padding: 0; font-size: 14px; }
+        .contact-list li { margin-bottom: 8px; }
+        .contact-list i { width: 20px; color: #777; }
+
+        /* --- 切换按钮样式 --- */
+        .switch-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 8px 15px;
+            background-color: #222; /* 黑色背景代表科幻/暗黑模式 */
+            color: #0f0; /* 绿色文字代表代码/科幻感 */
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            transition: all 0.3s;
+        }
+        .switch-btn:hover {
+            background-color: #000;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+            text-decoration: none;
+        }
+
+        /* --- 主内容区样式 (右侧) --- */
+        .main-content {
+            flex-grow: 1;
+            padding: 40px 60px;
+        }
+
+        /* 顶部导航 */
+        .nav-links {
+            margin-bottom: 40px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        .nav-links a {
+            margin-right: 20px;
+            color: #666;
+            font-weight: 500;
+        }
+        .nav-links a.active { color: var(--link-color); font-weight: bold; }
+
+        /* 标题样式 */
+        h2 {
+            font-size: 22px;
+            color: #d9534f; /* 模仿截图中的红色图标/标题色调 */
+            margin-top: 40px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        h2 i { margin-right: 10px; }
+
+        /* News 列表 */
+        .news-list { list-style: none; padding: 0; }
+        .news-list li { margin-bottom: 10px; font-size: 15px; }
+        .news-date { font-family: monospace; color: #888; margin-right: 10px; font-weight: bold; }
+
+        /* 论文列表 (模仿截图布局) */
+        .pub-item {
+            display: flex;
+            margin-bottom: 30px;
+            gap: 20px;
+        }
+        .pub-thumb {
+            width: 200px;
+            flex-shrink: 0;
+        }
+        .pub-thumb img {
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+        .pub-details { flex-grow: 1; }
+        .pub-title { font-weight: bold; font-size: 16px; display: block; margin-bottom: 5px; }
+        .pub-authors { font-size: 14px; color: #555; margin-bottom: 5px; }
+        .pub-links a {
+            font-size: 12px;
+            margin-right: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .pub-desc {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+        }
+        .pub-desc ul { margin: 5px 0 0 20px; padding: 0; }
+
+        /* --- 移动端适配 --- */
+        @media (max-width: 768px) {
+            .container { flex-direction: column; }
+            .sidebar { width: auto; border-right: none; border-bottom: 1px solid #eee; text-align: center; }
+            .main-content { padding: 20px; }
+            .pub-item { flex-direction: column; }
+            .pub-thumb { width: 100%; max-width: 300px; margin: 0 auto; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <aside class="sidebar">
+        <img src="https://via.placeholder.com/150" alt="Profile" class="profile-img">
+        
+        <div class="name">YuanShuo Zhang</div>
+        <span class="cn-name">章 远 硕</span>
+        
+        <div class="sidebar-info">
+            <p>PhD Student @ SJTU</p>
+            <p>Shanghai Jiao Tong University</p>
+            <p><i class="fas fa-map-marker-alt"></i> Beijing, China</p>
+        </div>
+
+        <ul class="contact-list">
+            <li><i class="fas fa-envelope"></i> <a href="mailto:your.email@gmail.com">Email</a></li>
+            <li><i class="fab fa-twitter"></i> <a href="#">Twitter</a></li>
+            <li><i class="fab fa-github"></i> <a href="#">GitHub</a></li>
+            <li><i class="fas fa-graduation-cap"></i> <a href="#">Google Scholar</a></li>
+            <li><i class="fab fa-orcid"></i> <a href="#">ORCID</a></li>
+            <li><i class="fas fa-globe"></i> <a href="#">Zhihu</a></li>
+        </ul>
+
+        <a href="index.html" class="switch-btn">
+            <i class="fas fa-rocket"></i> Switch to Sci-Fi Mode
+        </a>
+    </aside>
+
+    <main class="main-content">
+        <nav class="nav-links">
+            <a href="#" class="active">Homepage</a>
+            <a href="#about">About Me</a>
+            <a href="#news">News</a>
+            <a href="#publications">Publications</a>
+        </nav>
+
+        <section id="about">
+            <h2><i class="fas fa-user-astronaut"></i> About Me</h2>
+            <p>
+                I am a first-year PhD student @ <a href="#">SJTU</a>, supervised by <a href="#">Siheng Chen</a>. 
+                My general research interest lies in LLM agent applications. Currently, I focus on integrating LLM agents into embodied agent development.
+            </p>
+            <p>
+                If you are interested in me and seek for cooperation, feel free to email me.
+            </p>
+        </section>
+
+        <section id="news">
+            <h2><i class="fas fa-fire"></i> News</h2>
+            <ul class="news-list">
+                <li>
+                    <span class="news-date">2026.01:</span> 
+                    🎉 The paper entitled "InfoMosaic-Bench..." has been accepted by ICLR 2026.
+                </li>
+                <li>
+                    <span class="news-date">2025.10:</span> 
+                    🎉 The paper entitled "FLORA..." has been accepted by LoG 2025.
+                </li>
+            </ul>
+        </section>
+
+        <section id="publications">
+            <h2><i class="fas fa-book-open"></i> Publications</h2>
+            
+            <div class="pub-item">
+                <div class="pub-thumb">
+                    <img src="https://via.placeholder.com/300x160" alt="Paper Thumbnail">
+                </div>
+                <div class="pub-details">
+                    <a href="#" class="pub-title">InfoMosaic-Bench: Evaluating Multi-Source Information Seeking</a>
+                    <div class="pub-authors">
+                        Yaxin Du, <strong>Yuanshuo Zhang</strong>, Xiyuan Yang, et al.
+                    </div>
+                    <div class="pub-links">
+                        <a href="#"><i class="fab fa-github"></i> Code</a>
+                        <a href="#"><i class="fas fa-file-pdf"></i> PDF</a>
+                    </div>
+                    <div class="pub-desc">
+                        <ul>
+                            <li>Role: co-author.</li>
+                            <li>We introduce InfoMosaic-Bench to evaluate multi-source information seeking for tool-augmented agents.</li>
+                            <li>Accepted by ICLR 2026.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-thumb">
+                     <img src="https://via.placeholder.com/300x160" alt="Paper Thumbnail">
+                </div>
+                <div class="pub-details">
+                    <a href="#" class="pub-title">FLORA: GNNs as Predictors of Agentic Workflow Performances</a>
+                    <div class="pub-authors">
+                        <strong>Yuanshuo Zhang</strong>, Yuchen Hou, Bohan Tang, et al.
+                    </div>
+                    <div class="pub-links">
+                        <a href="#"><i class="fab fa-github"></i> Code</a>
+                        <a href="#"><i class="fas fa-file-pdf"></i> PDF</a>
+                    </div>
+                    <div class="pub-desc">
+                        <ul>
+                            <li>Role: first author.</li>
+                            <li>We propose FLORA to use GNNs as predictors...</li>
+                            <li>Accepted by LoG 2025.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+</div>
+
+</body>
+</html>
