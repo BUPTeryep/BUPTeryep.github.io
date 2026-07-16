@@ -1,0 +1,95 @@
+1:"$Sreact.fragment"
+3:I[3719,["461","static/chunks/461-a9a5d7b05a71d978.js","874","static/chunks/874-6cc630662f3664af.js","291","static/chunks/291-e39730cc9327e39b.js","177","static/chunks/app/layout-b59b2acfff020e85.js"],"ThemeProvider"]
+4:I[310,["461","static/chunks/461-a9a5d7b05a71d978.js","874","static/chunks/874-6cc630662f3664af.js","291","static/chunks/291-e39730cc9327e39b.js","177","static/chunks/app/layout-b59b2acfff020e85.js"],"LocaleProvider"]
+5:I[4574,["461","static/chunks/461-a9a5d7b05a71d978.js","874","static/chunks/874-6cc630662f3664af.js","291","static/chunks/291-e39730cc9327e39b.js","177","static/chunks/app/layout-b59b2acfff020e85.js"],"default"]
+6:I[7555,[],""]
+7:I[1295,[],""]
+8:I[2548,["461","static/chunks/461-a9a5d7b05a71d978.js","874","static/chunks/874-6cc630662f3664af.js","291","static/chunks/291-e39730cc9327e39b.js","177","static/chunks/app/layout-b59b2acfff020e85.js"],"default"]
+9:I[6613,["461","static/chunks/461-a9a5d7b05a71d978.js","178","static/chunks/178-595a94b9af1e67b5.js","874","static/chunks/874-6cc630662f3664af.js","748","static/chunks/748-84df502d24ed20fb.js","974","static/chunks/app/page-c8fcca779ba552bd.js"],"default"]
+c:I[9665,[],"MetadataBoundary"]
+e:I[9665,[],"OutletBoundary"]
+11:I[4911,[],"AsyncMetadataOutlet"]
+13:I[9665,[],"ViewportBoundary"]
+15:I[6614,[],""]
+:HL["/_next/static/css/220751dcb2cdf23d.css","style"]
+2:T5d7,
+    try {
+      const cfg = {"enabled":true,"locales":["zh","en"],"defaultLocale":"en","mode":"auto","fixedLocale":"en","persist":true,"switcher":true,"labels":{"zh":"中文","en":"English"}};
+      const storageKey = 'locale-storage';
+      const normalize = (value) => typeof value === 'string' ? value.trim().replace('_', '-').toLowerCase() : '';
+      const matchLocale = (candidate) => {
+        const normalized = normalize(candidate);
+        if (!normalized) return null;
+        if (cfg.locales.includes(normalized)) return normalized;
+        const language = normalized.split('-')[0];
+        if (cfg.locales.includes(language)) return language;
+        return null;
+      };
+
+      let resolved = null;
+
+      if (!cfg.enabled) {
+        resolved = cfg.defaultLocale;
+      } else if (cfg.persist) {
+        resolved = matchLocale(localStorage.getItem(storageKey));
+      }
+
+      if (!resolved) {
+        if (cfg.mode === 'fixed') {
+          resolved = cfg.fixedLocale;
+        } else {
+          resolved = matchLocale(navigator.language);
+        }
+      }
+
+      if (!resolved) {
+        resolved = cfg.defaultLocale;
+      }
+
+      const root = document.documentElement;
+      root.lang = resolved;
+      root.setAttribute('data-locale', resolved);
+
+      if (cfg.persist) {
+        localStorage.setItem(storageKey, resolved);
+      }
+    } catch (e) {
+      const root = document.documentElement;
+      root.lang = 'en';
+      root.setAttribute('data-locale', 'en');
+    }
+  a:T7a4,@article{Zhang_Chen_Li_Wang_2026_AAAI,
+  title = {ADAPT: Adaptive Decentralized Architecture with Perception-Aligned Training for Structural Generalization in Multi-Agent RL},
+  volume = {40},
+  url = {https://ojs.aaai.org/index.php/AAAI/article/view/40096},
+  DOI = {10.1609/aaai.v40i34.40096},
+  abstractNote = {Multi-agent reinforcement learning (MARL) excels in cooperative and competitive tasks, but most architectures are tied to fixed input-output sizes and require retraining when the number of perceptible or controllable objects changes. While structural generalization techniques mitigate this, they rely on centralized training, raising concerns about scalability and privacy. We propose ADAPT, the first framework to support structural generalization under a decentralized training and decentralized execution (DTDE) paradigm. Every agent adopts an object-centric view, encoding each observed object into a feature vector and aggregating them into a variable-length set representation. To enable each agent to infer task-level contexts from this dynamic input independently, we propose a dynamic-consistency loss that enforces spatio-temporal alignment between context representations and observed environmental dynamics. Agents then condition their policies on the inferred contexts to make locally aligned decisions. For zero-shot transfer, we propose FINE (Foresight INdex for multi-agEnt), a metric that considers Q-value overestimation and enables cross-policy comparison of long-term impact, facilitating effective policy transfer. Experiments show that ADAPT surpasses existing DTDE methods and outperforms CTDE baselines in zero-shot generalization.},
+  number = {34},
+  journal = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  author = {Zhang, Zhixiang and Chen, Shuo and Li, Yexin and Wang, Feng},
+  year = {2026},
+  month = {Mar.},
+  pages = {28645–28652},
+  doi = {https://doi.org/10.1609/aaai.v40i34.40096}
+}b:T7a4,@article{Zhang_Chen_Li_Wang_2026_AAAI,
+  title = {ADAPT: Adaptive Decentralized Architecture with Perception-Aligned Training for Structural Generalization in Multi-Agent RL},
+  volume = {40},
+  url = {https://ojs.aaai.org/index.php/AAAI/article/view/40096},
+  DOI = {10.1609/aaai.v40i34.40096},
+  abstractNote = {Multi-agent reinforcement learning (MARL) excels in cooperative and competitive tasks, but most architectures are tied to fixed input-output sizes and require retraining when the number of perceptible or controllable objects changes. While structural generalization techniques mitigate this, they rely on centralized training, raising concerns about scalability and privacy. We propose ADAPT, the first framework to support structural generalization under a decentralized training and decentralized execution (DTDE) paradigm. Every agent adopts an object-centric view, encoding each observed object into a feature vector and aggregating them into a variable-length set representation. To enable each agent to infer task-level contexts from this dynamic input independently, we propose a dynamic-consistency loss that enforces spatio-temporal alignment between context representations and observed environmental dynamics. Agents then condition their policies on the inferred contexts to make locally aligned decisions. For zero-shot transfer, we propose FINE (Foresight INdex for multi-agEnt), a metric that considers Q-value overestimation and enables cross-policy comparison of long-term impact, facilitating effective policy transfer. Experiments show that ADAPT surpasses existing DTDE methods and outperforms CTDE baselines in zero-shot generalization.},
+  number = {34},
+  journal = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  author = {Zhang, Zhixiang and Chen, Shuo and Li, Yexin and Wang, Feng},
+  year = {2026},
+  month = {Mar.},
+  pages = {28645–28652},
+  doi = {https://doi.org/10.1609/aaai.v40i34.40096}
+}0:{"P":null,"b":"LDKgUu4nHSB8sk79HdmKw","p":"","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/220751dcb2cdf23d.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"scroll-smooth","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","link",null,{"rel":"dns-prefetch","href":"https://jialeliu.com"}],["$","link",null,{"rel":"preconnect","href":"https://jialeliu.com","crossOrigin":""}],["$","link",null,{"rel":"preload","as":"font","type":"font/woff2","href":"https://jialeliu.com/fonts/georgiab.woff2","crossOrigin":""}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n              try {\n                const theme = localStorage.getItem('theme-storage');\n                const parsed = theme ? JSON.parse(theme) : null;\n                const setting = parsed?.state?.theme || 'system';\n                const prefersDark = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;\n                const effective = setting === 'dark' ? 'dark' : (setting === 'light' ? 'light' : (prefersDark ? 'dark' : 'light'));\n                var root = document.documentElement;\n                root.classList.add(effective);\n                root.setAttribute('data-theme', effective);\n              } catch (e) {\n                var root = document.documentElement;\n                root.classList.add('light');\n                root.setAttribute('data-theme', 'light');\n              }\n            "}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}]]}],["$","body",null,{"className":"font-sans antialiased","children":["$","$L3",null,{"children":["$","$L4",null,{"config":{"enabled":true,"locales":["zh","en"],"defaultLocale":"en","mode":"auto","fixedLocale":"en","persist":true,"switcher":true,"labels":{"zh":"中文","en":"English"}},"children":[["$","$L5",null,{"items":[{"title":"About","type":"page","target":"about","href":"/"},{"title":"Publications","type":"page","target":"publications","href":"/publications"},{"title":"Teaching","type":"page","target":"teaching","href":"/teaching"}],"siteTitle":"Zhixiang Zhang","enableOnePageMode":false,"i18n":"$0:f:0:1:1:props:children:1:props:children:1:props:children:props:children:props:config","itemsByLocale":{"zh":[{"title":"关于我","type":"page","target":"about","href":"/"},{"title":"论文","type":"page","target":"publications","href":"/publications"},{"title":"教学","type":"page","target":"teaching","href":"/teaching"}],"en":[{"title":"About","type":"page","target":"about","href":"/"},{"title":"Publications","type":"page","target":"publications","href":"/publications"},{"title":"Teaching","type":"page","target":"teaching","href":"/teaching"}]},"siteTitleByLocale":{"zh":"张志翔","en":"Zhixiang Zhang"}}],["$","main",null,{"className":"min-h-screen pt-16 lg:pt-20","children":["$","$L6",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","$L8",null,{"lastUpdated":"November 18, 2025","lastUpdatedByLocale":{"zh":"2025年11月18日","en":"November 18, 2025"},"defaultLocale":"en"}]]}]}]}]]}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","$L9",null,{"dataByLocale":{"zh":{"author":{"name":"张志翔","title":"博士生","institution":"武汉大学&北京通用人工智能研究院","avatar":"/qq_image.jpg"},"social":{"email":"zhixiangzhang2024@163.com","google_scholar":"https://scholar.google.com/citations?hl=en&user=sxwinR4AAAAJ","orcid":"https://orcid.org","github":"https://github.com","linkedin":"https://linkedin.com","location":"中国北京","location_details":[]},"features":{"enable_likes":true,"enable_one_page_mode":false},"enableOnePageMode":false,"researchInterests":["多智能体强化学习","大语言模型","智能体"],"pagesToShow":[{"type":"about","id":"about","sections":[{"id":"about","type":"markdown","source":"bio.md","title":"关于我","content":"我是武汉大学 & 北京通用人工智能研究院在读博士生，导师是 [陈烁研究员](https://scholar.google.com/citations?user=xQuRTBQAAAAJ&hl=en&oi=ao) 和 [王峰教授](https://cs.whu.edu.cn/info/1019/2940.htm)。\n\n我的研究主要关注基于强化学习的智能体 & 基于大语言模型的智能体的泛化能力。\n"},{"id":"featured_publications","type":"publications","title":"精选论文","filter":"selected","limit":5,"publications":[{"id":"Zhang_Chen_Li_Wang_2026_AAAI","title":"ADAPT: Adaptive Decentralized Architecture with Perception-Aligned Training for Structural Generalization in Multi-Agent RL","titleNodes":[{"type":"text","text":"ADAPT: Adaptive Decentralized Architecture with Perception-Aligned Training for Structural Generalization in Multi-Agent RL"}],"authors":[{"name":"Zhixiang Zhang","isHighlighted":true,"isCorresponding":false,"isCoAuthor":false},{"name":"Shuo Chen","isHighlighted":false,"isCorresponding":true,"isCoAuthor":false},{"name":"Yexin Li","isHighlighted":false,"isCorresponding":false,"isCoAuthor":false},{"name":"Feng Wang","isHighlighted":false,"isCorresponding":true,"isCoAuthor":false}],"year":2026,"month":"Mar.","type":"journal","status":"published","tags":[],"keywords":"$0:f:0:1:2:children:1:props:children:0:props:dataByLocale:zh:pagesToShow:0:sections:1:publications:0:tags","researchArea":"machine-learning","journal":"Proceedings of the AAAI Conference on Artificial Intelligence","conference":"","volume":"40","issue":"34","pages":"28645–28652","doi":"https://doi.org/10.1609/aaai.v40i34.40096","url":"https://ojs.aaai.org/index.php/AAAI/article/view/40096","abstract":"","description":"","selected":true,"bibtex":"$a"}]},{"id":"news","type":"list","title":"动态","source":"news.toml","items":[{"date":"2025-11","content":"我们的工作\"ADAPT: Adaptive Decentralized Architecture with Perception-Aligned Training for Structural Generalization in Multi-Agent RL\"被AAAI 2026 main track接收。"}]}]}]},"en":{"author":{"name":"Zhixiang Zhang","title":"PhD Student","institution":"Wuhan University & BIGAI","avatar":"/qq_image.jpg"},"social":{"email":"zhixiangzhang2024@163.com","google_scholar":"https://scholar.google.com/citations?hl=en&user=sxwinR4AAAAJ","orcid":"https://orcid.org","github":"https://github.com","linkedin":"https://linkedin.com"},"features":{"enable_likes":true,"enable_one_page_mode":false},"enableOnePageMode":false,"researchInterests":["Multi-Agent Reinforcement Learning (MARL)","Large Language Model (LLM)","Agent"],"pagesToShow":[{"type":"about","id":"about","sections":[{"id":"about","type":"markdown","source":"bio.md","title":"About","content":"I am a PhD student at the School of Computer Science, Wuhan University & Beijing Institute of General Artificial Intelligence (BIGAI), advised by [Dr. Shuo Chen](https://scholar.google.com/citations?user=xQuRTBQAAAAJ&hl=en&oi=ao) and [Prof. Feng Wang](https://cs.whu.edu.cn/info/1019/2940.htm).\n\nMy current research focuses on investigating the generalization of RL-based & LLM-based agent."},{"id":"featured_publications","type":"publications","title":"Selected Publications","filter":"selected","limit":5,"publications":[{"id":"Zhang_Chen_Li_Wang_2026_AAAI","title":"ADAPT: Adaptive Decentralized Architecture with Perception-Aligned Training for Structural Generalization in Multi-Agent RL","titleNodes":[{"type":"text","text":"ADAPT: Adaptive Decentralized Architecture with Perception-Aligned Training for Structural Generalization in Multi-Agent RL"}],"authors":[{"name":"Zhixiang Zhang","isHighlighted":true,"isCorresponding":false,"isCoAuthor":false},{"name":"Shuo Chen","isHighlighted":false,"isCorresponding":true,"isCoAuthor":false},{"name":"Yexin Li","isHighlighted":false,"isCorresponding":false,"isCoAuthor":false},{"name":"Feng Wang","isHighlighted":false,"isCorresponding":true,"isCoAuthor":false}],"year":2026,"month":"Mar.","type":"journal","status":"published","tags":[],"keywords":"$0:f:0:1:2:children:1:props:children:0:props:dataByLocale:en:pagesToShow:0:sections:1:publications:0:tags","researchArea":"machine-learning","journal":"Proceedings of the AAAI Conference on Artificial Intelligence","conference":"","volume":"40","issue":"34","pages":"28645–28652","doi":"https://doi.org/10.1609/aaai.v40i34.40096","url":"https://ojs.aaai.org/index.php/AAAI/article/view/40096","abstract":"","description":"","selected":true,"bibtex":"$b"}]},{"id":"news","type":"list","title":"News","source":"news.toml","items":[{"date":"2025-11","content":"Our work \"ADAPT: Adaptive Decentralized Architecture with Perception-Aligned Training for Structural Generalization in Multi-Agent RL\" has been accepted by AAAI 2026 main track."}]}]}]}},"defaultLocale":"en"}],["$","$Lc",null,{"children":"$Ld"}],null,["$","$Le",null,{"children":["$Lf","$L10",["$","$L11",null,{"promise":"$@12"}]]}]]}],{},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","asuqKn1Br_1FiYILKNmks",{"children":[["$","$L13",null,{"children":"$L14"}],null]}],null]}],false]],"m":"$undefined","G":["$15","$undefined"],"s":false,"S":true}
+16:"$Sreact.suspense"
+17:I[4911,[],"AsyncMetadata"]
+d:["$","$16",null,{"fallback":null,"children":["$","$L17",null,{"promise":"$@18"}]}]
+10:null
+14:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+f:null
+18:{"metadata":[["$","title","0",{"children":"Zhixiang Zhang"}],["$","meta","1",{"name":"description","content":"PhD student at Wuhan University & BIGAI."}],["$","meta","2",{"name":"author","content":"Zhixiang Zhang"}],["$","meta","3",{"name":"keywords","content":"Zhixiang Zhang,PhD,Research,Wuhan University & BIGAI"}],["$","meta","4",{"name":"creator","content":"Zhixiang Zhang"}],["$","meta","5",{"name":"publisher","content":"Zhixiang Zhang"}],["$","meta","6",{"property":"og:title","content":"Zhixiang Zhang"}],["$","meta","7",{"property":"og:description","content":"PhD student at Wuhan University & BIGAI."}],["$","meta","8",{"property":"og:site_name","content":"Zhixiang Zhang's Academic Website"}],["$","meta","9",{"property":"og:locale","content":"en_US"}],["$","meta","10",{"property":"og:type","content":"website"}],["$","meta","11",{"name":"twitter:card","content":"summary"}],["$","meta","12",{"name":"twitter:title","content":"Zhixiang Zhang"}],["$","meta","13",{"name":"twitter:description","content":"PhD student at Wuhan University & BIGAI."}],["$","link","14",{"rel":"icon","href":"/favicon.svg"}]],"error":null,"digest":"$undefined"}
+12:{"metadata":"$18:metadata","error":null,"digest":"$undefined"}
